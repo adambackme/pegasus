@@ -83,6 +83,7 @@ p { color: var(--muted); line-height: 1.82; }
   border-bottom-color: var(--line);
 }
 @media (max-width: 640px) { .nav { padding: 0 22px; } }
+@media (max-width: 768px) { .nav-btn { display: none; } }
 
 .nav-logo {
   display: flex; align-items: center; gap: 11px;
@@ -692,7 +693,7 @@ p { color: var(--muted); line-height: 1.82; }
 .cta-form-sub { font-size: .8rem; color: rgba(255,255,255,.32); margin-bottom: 20px; }
 .cta-form { display: flex; flex-direction: column; gap: 10px; }
 .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-@media (max-width: 480px) { .cf-row { grid-template-columns: 1fr; } }
+@media (max-width: 768px) { .cf-row { grid-template-columns: 1fr; } }
 .cta-form input, .cta-form select {
   background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.11);
   padding: 13px 15px; color: rgba(255,255,255,.85);
@@ -797,6 +798,10 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
   .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; }
   .niches-grid { grid-template-columns: 1fr 1fr; }
   .niche-card { padding: 24px 20px; }
+}
+@media (max-width: 390px) {
+  .niches-grid { grid-template-columns: 1fr; }
+  .niche-card { padding: 22px 18px; }
 }
 
 </style>
@@ -1041,7 +1046,7 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
         <h2 class="section-h rev">Every site <span class="f">built<br/>from scratch.</span><br/>No templates.</h2>
       </div>
       <div class="work-intro-right rev">
-        <p>From dental practices to law firms, plumbers to ecommerce brands — four completely different identities, four completely different results. Every project starts from a blank canvas.</p>
+        <p>SaaS dashboards to luxury marketplaces, healthcare portals to Shopify stores and EdTech platforms — every project is a completely different brief, a completely different result. All built from scratch.</p>
         <a href="#cta" class="btn-line">Start your project →</a>
       </div>
     </div>
@@ -1049,181 +1054,265 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
 
   <div class="projects">
 
-    <!-- ─ Dental ─ -->
+    <!-- ─ FinTrack SaaS ─ -->
     <div class="project rev">
-      <div class="proj-visual pv-dental">
-        <div class="proj-bg pv-dental"></div>
+      <div class="proj-visual" style="background:linear-gradient(145deg,#05070f 0%,#0d1425 50%,#0a0e1f 100%)">
+        <div class="proj-bg" style="background:linear-gradient(145deg,#05070f 0%,#0d1425 50%,#0a0e1f 100%)"></div>
         <div class="proj-browser">
-          <div class="pb-bar" style="background:#f3ede0">
+          <div class="pb-bar" style="background:#080d1a">
             <div class="pb-dots"><span></span><span></span><span></span></div>
-            <div class="pb-url" style="background:#faf5ed;border:1px solid rgba(74,112,85,.2);color:#9a9478">brightsmilefamilydentistry.com</div>
+            <div class="pb-url" style="background:#0f1628;border:1px solid #1e2d4a;color:#4a6580">fintrack-finanace-saas-dashboard.netlify.app</div>
           </div>
-          <div class="proj-preview" style="display:grid;grid-template-columns:1fr 1fr;height:260px;overflow:hidden">
-            <div style="background:#faf5ed;padding:20px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden">
-              <div style="position:absolute;bottom:-20px;left:-10px;font-family:Georgia,serif;font-size:100px;font-weight:600;font-style:italic;color:rgba(74,112,85,.04);line-height:1">S</div>
-              <div style="font-size:9px;color:#4a7055;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;font-family:sans-serif;display:flex;align-items:center;gap:5px"><span style="width:8px;height:8px;border-radius:50%;background:#4a7055;display:inline-block"></span>Family Dentistry · Austin, Texas</div>
-              <div style="font-family:Georgia,serif;font-size:24px;font-weight:400;color:#1a1a14;line-height:1.08;margin-bottom:14px">Your smile<br/>deserves<br/><em style="color:#4a7055">the best</em><br/>care.</div>
-              <div style="display:flex;gap:8px">
-                <div style="background:#4a7055;color:white;font-size:10px;padding:8px 14px;border-radius:20px;font-family:sans-serif;font-weight:600">Book appointment</div>
-                <div style="border:1px solid rgba(74,112,85,.3);color:#4a7055;font-size:10px;padding:7px 12px;border-radius:20px;font-family:sans-serif">Our services</div>
+          <div style="background:#060b18;height:260px;overflow:hidden;position:relative">
+            <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(99,130,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(99,130,255,.04) 1px,transparent 1px);background-size:32px 32px"></div>
+            <div style="background:#0b1221;height:32px;border-bottom:1px solid rgba(99,130,255,.12);display:flex;align-items:center;padding:0 14px;justify-content:space-between;position:relative;z-index:1">
+              <span style="font-family:sans-serif;font-size:11px;font-weight:800;color:white;letter-spacing:.04em">Fin<span style="color:#6382ff">Track</span></span>
+              <div style="display:flex;gap:6px;align-items:center">
+                <div style="width:6px;height:6px;border-radius:50%;background:#22c55e"></div>
+                <span style="font-size:9px;color:rgba(255,255,255,.4);font-family:sans-serif">Live</span>
               </div>
             </div>
-            <div style="background:linear-gradient(160deg,#5e8a6a 0%,#4a7055 40%,#2d5a3d 100%);display:flex;flex-direction:column;justify-content:flex-end">
-              <div style="padding:16px 14px;border-top:1px solid rgba(255,255,255,.1)">
-                <div style="font-family:Georgia,serif;font-size:13px;font-style:italic;color:rgba(255,255,255,.85);line-height:1.5;margin-bottom:6px">"Every visit should leave you feeling better than when you arrived."</div>
-                <div style="font-size:10px;color:rgba(255,255,255,.45);font-family:sans-serif">Dr. Priya Rajanna — 15 years in Austin</div>
-              </div>
-              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid rgba(255,255,255,.08)">
-                <div style="padding:12px 8px;text-align:center;border-right:1px solid rgba(255,255,255,.07)"><div style="font-family:Georgia,serif;font-size:16px;color:rgba(255,255,255,.85)">15+</div><div style="font-size:8px;color:rgba(255,255,255,.35);font-family:sans-serif;margin-top:2px">Years</div></div>
-                <div style="padding:12px 8px;text-align:center;border-right:1px solid rgba(255,255,255,.07)"><div style="font-family:Georgia,serif;font-size:16px;color:rgba(255,255,255,.85)">4.9★</div><div style="font-size:8px;color:rgba(255,255,255,.35);font-family:sans-serif;margin-top:2px">Rating</div></div>
-                <div style="padding:12px 8px;text-align:center"><div style="font-family:Georgia,serif;font-size:16px;color:rgba(255,255,255,.85)">4.8k</div><div style="font-size:8px;color:rgba(255,255,255,.35);font-family:sans-serif;margin-top:2px">Patients</div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="proj-info">
-        <div class="proj-cat">Dental Practice · Austin, TX</div>
-        <div class="proj-name">Bright Smile Family Dentistry</div>
-        <p class="proj-desc">Editorial warmth meets clinical trust. Split-panel hero — cream left, forest green right. The anxiety of visiting a dentist replaced by the feeling of a trusted friend.</p>
-        <div class="proj-pills">
-          <div class="proj-pill"><span class="up">↑</span> Page 4 → #1</div>
-          <div class="proj-pill">+127% monthly calls</div>
-          <div class="proj-pill">38 days to page 1</div>
-        </div>
-        <a href="https://brightsmile-dental.vercel.app" target="_blank" rel="noopener" class="proj-link">View live site <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m4-3h6v6m-11 5L21 3"/></svg></a>
-      </div>
-    </div>
-
-    <!-- ─ Law ─ -->
-    <div class="project flip rev">
-      <div class="proj-visual pv-law">
-        <div class="proj-bg pv-law"></div>
-        <div class="proj-browser">
-          <div class="pb-bar" style="background:#0c0c0c">
-            <div class="pb-dots"><span></span><span></span><span></span></div>
-            <div class="pb-url" style="background:#1a1a1a;border:1px solid #333;color:#666">laurentlaw.com</div>
-          </div>
-          <div class="proj-preview-dark" style="background:#050505;height:260px;overflow:hidden;position:relative">
-            <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(184,146,42,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(184,146,42,.035) 1px,transparent 1px);background-size:48px 48px"></div>
-            <div style="background:rgba(5,5,8,.92);height:36px;border-bottom:1px solid rgba(184,146,42,.15);display:flex;align-items:center;padding:0 16px;position:relative;z-index:1;justify-content:space-between">
-              <span style="font-family:Georgia,serif;font-size:11px;color:rgba(255,255,255,.75);letter-spacing:.1em;text-transform:uppercase">LAURENT<span style="color:#b8922a">.</span>LAW</span>
-              <div style="border:1px solid rgba(184,146,42,.5);color:#b8922a;font-size:8px;padding:4px 10px;font-family:sans-serif;letter-spacing:.08em">FREE CONSULTATION</div>
-            </div>
-            <div style="padding:20px 18px 0;position:relative;z-index:1">
-              <div style="font-size:8px;color:rgba(184,146,42,.65);letter-spacing:.2em;text-transform:uppercase;margin-bottom:10px;font-family:sans-serif">Personal Injury Attorneys · Miami, FL</div>
-              <div style="font-family:Georgia,serif;font-size:28px;font-weight:400;color:rgba(255,255,255,.88);line-height:1.02;margin-bottom:14px">When you're injured,<br/>you deserve<br/><em style="color:#b8922a;font-size:32px">maximum</em><br/>recovery.</div>
-              <div style="display:flex;gap:10px">
-                <div style="background:#b8922a;color:#050505;font-size:9px;padding:8px 16px;font-family:sans-serif;font-weight:700;letter-spacing:.06em">FREE CONSULTATION</div>
-                <div style="border:1px solid rgba(184,146,42,.4);color:rgba(184,146,42,.7);font-size:9px;padding:7px 14px;font-family:sans-serif">Case results</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="proj-info">
-        <div class="proj-cat">Personal Injury Law · Miami, FL</div>
-        <div class="proj-name">Laurent Law Group</div>
-        <p class="proj-desc">Pure black × gold. Case results front and centre. The architecture of authority — a site that commands the weight of $50M+ in recoveries.</p>
-        <div class="proj-pills">
-          <div class="proj-pill"><span class="up">↑</span> Page 3 → #1</div>
-          <div class="proj-pill">+210% enquiries</div>
-          <div class="proj-pill">29 days to page 1</div>
-        </div>
-        <a href="https://laurent-lawgroup.vercel.app" target="_blank" rel="noopener" class="proj-link">View live site <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m4-3h6v6m-11 5L21 3"/></svg></a>
-      </div>
-    </div>
-
-    <!-- ─ Plumbing ─ -->
-    <div class="project rev">
-      <div class="proj-visual pv-plumb">
-        <div class="proj-bg pv-plumb"></div>
-        <div class="proj-browser">
-          <div class="pb-bar" style="background:#0f1f38">
-            <div class="pb-dots"><span></span><span></span><span></span></div>
-            <div class="pb-url" style="background:#162744;border:1px solid #1f3458;color:#7a8e9e">klein-plumbing.co.uk</div>
-          </div>
-          <div style="background:#0a1523;height:260px;overflow:hidden;position:relative" id="plumb-bg">
-            <div style="background:#f05a1e;height:22px;display:flex;align-items:center;justify-content:center"><span style="font-size:9px;color:white;font-family:sans-serif;font-weight:600;letter-spacing:.04em">🔧 EMERGENCY PLUMBER · 0161 312 3229 · 24/7 · NO CALL-OUT CHARGE</span></div>
-            <div style="background:#0e1f34;height:32px;border-bottom:3px solid #f05a1e;display:flex;align-items:center;padding:0 14px;justify-content:space-between"><span style="font-family:sans-serif;font-size:13px;font-weight:900;text-transform:uppercase;color:white;letter-spacing:.04em">KLEIN<em style="font-style:normal;color:#f05a1e">&</em>CO</span><div style="background:#f05a1e;color:white;font-size:9px;padding:5px 10px;font-family:sans-serif;font-weight:700">📞 0161 312 3229</div></div>
-            <div class="proj-plumb-inner" style="display:grid;grid-template-columns:1fr 160px;height:206px">
-              <div style="padding:16px;display:flex;flex-direction:column;justify-content:center">
-                <div style="font-size:8px;background:rgba(240,90,30,.18);border:1px solid rgba(240,90,30,.3);color:#f07540;padding:4px 10px;display:inline-block;margin-bottom:12px;font-family:sans-serif;font-weight:700;letter-spacing:.1em;text-transform:uppercase">Manchester's #1 Rated Plumber</div>
-                <div style="font-family:sans-serif;font-size:34px;font-weight:900;text-transform:uppercase;color:white;line-height:.92;letter-spacing:.01em;margin-bottom:14px">FAST.<br/>FAIR.<br/><span style="color:#f05a1e">FIXED.</span></div>
-                <div style="display:flex;gap:8px">
-                  <div style="background:#f05a1e;color:white;font-size:9px;padding:8px 12px;font-family:sans-serif;font-weight:700">📞 CALL NOW — 24/7</div>
-                  <div style="border:1.5px solid rgba(255,255,255,.22);color:rgba(255,255,255,.65);font-size:9px;padding:7px 12px;font-family:sans-serif">Our services</div>
+            <div style="padding:14px 16px;position:relative;z-index:1">
+              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:10px">
+                <div style="background:#0f1c32;border:1px solid rgba(99,130,255,.15);padding:10px;border-radius:6px">
+                  <div style="font-size:8px;color:rgba(255,255,255,.35);font-family:sans-serif;margin-bottom:4px">Revenue</div>
+                  <div style="font-size:16px;font-weight:700;color:white;font-family:sans-serif">$84.2k</div>
+                  <div style="font-size:8px;color:#22c55e;font-family:sans-serif;margin-top:2px">↑ 12.4%</div>
+                </div>
+                <div style="background:#0f1c32;border:1px solid rgba(99,130,255,.15);padding:10px;border-radius:6px">
+                  <div style="font-size:8px;color:rgba(255,255,255,.35);font-family:sans-serif;margin-bottom:4px">Users</div>
+                  <div style="font-size:16px;font-weight:700;color:white;font-family:sans-serif">3,241</div>
+                  <div style="font-size:8px;color:#22c55e;font-family:sans-serif;margin-top:2px">↑ 8.1%</div>
+                </div>
+                <div style="background:#0f1c32;border:1px solid rgba(99,130,255,.15);padding:10px;border-radius:6px">
+                  <div style="font-size:8px;color:rgba(255,255,255,.35);font-family:sans-serif;margin-bottom:4px">MRR</div>
+                  <div style="font-size:16px;font-weight:700;color:white;font-family:sans-serif">$7,890</div>
+                  <div style="font-size:8px;color:#22c55e;font-family:sans-serif;margin-top:2px">↑ 5.3%</div>
                 </div>
               </div>
-              <div style="background:#f05a1e;padding:14px;display:flex;flex-direction:column;position:relative;overflow:hidden">
-                <div style="position:absolute;top:-10px;right:-5px;font-family:sans-serif;font-size:70px;font-weight:900;color:rgba(0,0,0,.1);line-height:1">24/7</div>
-                <div style="font-size:8px;color:rgba(255,255,255,.7);font-family:sans-serif;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px;position:relative;z-index:1">Free Quote</div>
-                <div style="font-family:sans-serif;font-size:15px;font-weight:900;color:white;text-transform:uppercase;line-height:1.05;margin-bottom:10px;position:relative;z-index:1">Get a quote today</div>
-                <div style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);padding:6px 8px;font-size:9px;color:rgba(255,255,255,.55);margin-bottom:5px;font-family:sans-serif;position:relative;z-index:1">Your name</div>
-                <div style="background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);padding:6px 8px;font-size:9px;color:rgba(255,255,255,.55);margin-bottom:8px;font-family:sans-serif;position:relative;z-index:1">Phone number</div>
-                <div style="background:white;color:#f05a1e;font-size:9px;padding:8px;font-family:sans-serif;font-weight:700;text-align:center;position:relative;z-index:1">REQUEST QUOTE →</div>
+              <div style="background:#0f1c32;border:1px solid rgba(99,130,255,.12);padding:10px;border-radius:6px;height:88px;position:relative;overflow:hidden">
+                <div style="font-size:8px;color:rgba(255,255,255,.3);font-family:sans-serif;margin-bottom:8px">Revenue trend</div>
+                <svg viewBox="0 0 200 50" style="width:100%;height:40px"><polyline points="0,40 30,32 60,35 90,20 120,25 150,10 180,15 200,8" fill="none" stroke="#6382ff" stroke-width="1.5"/><polygon points="0,40 30,32 60,35 90,20 120,25 150,10 180,15 200,8 200,50 0,50" fill="rgba(99,130,255,.08)"/></svg>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="proj-info">
-        <div class="proj-cat">Plumbing & Heating · Manchester, UK</div>
-        <div class="proj-name">Klein & Co Plumbing</div>
-        <p class="proj-desc">Bold navy orange with zero apology. Emergency bar, contact form inside the hero. A trade site with attitude — and results to match.</p>
+        <div class="proj-cat">SaaS Dashboard · Finance</div>
+        <div class="proj-name">FinTrack Finance</div>
+        <p class="proj-desc">A full-featured finance SaaS dashboard — real-time revenue tracking, MRR charts, user analytics, and a clean dark-mode UI that feels like a premium product.</p>
         <div class="proj-pills">
-          <div class="proj-pill"><span class="up">↑</span> Page 5 → #1</div>
-          <div class="proj-pill">+89% organic traffic</div>
-          <div class="proj-pill">52 days to page 1</div>
+          <div class="proj-pill">SaaS / Dashboard</div>
+          <div class="proj-pill">Dark UI</div>
+          <div class="proj-pill">Data visualisation</div>
         </div>
-        <a href="https://klein-plumbing.vercel.app" target="_blank" rel="noopener" class="proj-link">View live site <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m4-3h6v6m-11 5L21 3"/></svg></a>
+        <a href="https://fintrack-finanace-saas-dashboard.netlify.app/" target="_blank" rel="noopener" class="proj-link">View live site <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m4-3h6v6m-11 5L21 3"/></svg></a>
       </div>
     </div>
 
-    <!-- ─ Chiro ─ -->
+    <!-- ─ Luxe Collective ─ -->
     <div class="project flip rev">
-      <div class="proj-visual pv-chiro">
-        <div class="proj-bg pv-chiro"></div>
+      <div class="proj-visual" style="background:linear-gradient(145deg,#0e0b07 0%,#1a1409 50%,#120e05 100%)">
+        <div class="proj-bg" style="background:linear-gradient(145deg,#0e0b07 0%,#1a1409 50%,#120e05 100%)"></div>
         <div class="proj-browser">
-          <div class="pb-bar" style="background:#f3ede0">
+          <div class="pb-bar" style="background:#110e08">
             <div class="pb-dots"><span></span><span></span><span></span></div>
-            <div class="pb-url" style="background:#faf5ed;border:1px solid rgba(74,112,85,.2);color:#9a9478">greenstreetchiro.com</div>
+            <div class="pb-url" style="background:#1a1508;border:1px solid #2e2510;color:#8a7a5a">luxe-collective-multi-vendor.netlify.app</div>
           </div>
-          <div class="proj-preview" style="display:grid;grid-template-columns:1fr 1fr;height:260px;overflow:hidden">
-            <div style="background:#faf5ed;padding:18px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden">
-              <div style="position:absolute;bottom:-16px;left:-8px;font-family:Georgia,serif;font-size:90px;font-weight:600;font-style:italic;color:rgba(74,112,85,.04);line-height:1">Heal</div>
-              <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(74,112,85,.1) 1px,transparent 1px);background-size:16px 16px"></div>
-              <div style="position:relative;z-index:1">
-                <div style="font-size:8px;color:#4a7055;letter-spacing:.14em;text-transform:uppercase;font-family:sans-serif;margin-bottom:8px;display:flex;align-items:center;gap:5px"><span style="width:7px;height:7px;border-radius:50%;background:#4a7055;display:inline-block"></span>Evidence-Based · Chicago IL</div>
-                <div style="font-family:Georgia,serif;font-size:22px;font-weight:400;color:#1e1e16;line-height:1.08;margin-bottom:10px">Restore<br/>your body's<br/><em style="color:#4a7055">natural rhythm.</em></div>
-                <div style="font-size:9px;color:#6a6458;line-height:1.5;margin-bottom:10px;font-family:sans-serif;max-width:160px">Evidence-based chiropractic for back pain, neck pain, sports injuries.</div>
-                <div style="background:#4a7055;color:white;font-size:9px;padding:7px 14px;border-radius:20px;display:inline-block;font-family:sans-serif;font-weight:500">Book appointment</div>
-              </div>
+          <div style="background:#0d0a05;height:260px;overflow:hidden;position:relative">
+            <div style="background:#120e06;height:32px;border-bottom:1px solid rgba(196,162,80,.12);display:flex;align-items:center;padding:0 14px;justify-content:space-between">
+              <span style="font-family:Georgia,serif;font-size:11px;color:rgba(196,162,80,.85);letter-spacing:.2em;text-transform:uppercase">LUXE COLLECTIVE</span>
+              <div style="border:1px solid rgba(196,162,80,.3);color:rgba(196,162,80,.7);font-size:8px;padding:3px 10px;font-family:sans-serif;letter-spacing:.08em">NEW COLLECTION</div>
             </div>
-            <div style="background:linear-gradient(150deg,#5e8a6a 0%,#4a7055 40%,#344f3c 100%);display:flex;flex-direction:column;justify-content:flex-end">
-              <div style="padding:14px;border-top:1px solid rgba(255,255,255,.1)">
-                <div style="font-family:Georgia,serif;font-size:12px;font-style:italic;color:rgba(255,255,255,.82);line-height:1.5;margin-bottom:6px">"The goal isn't to treat you forever — it's to restore your function."</div>
-                <div style="font-size:9px;color:rgba(255,255,255,.4);font-family:sans-serif">Dr. Sarah Chen, Lead Chiropractor</div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;height:228px">
+              <div style="padding:16px;display:flex;flex-direction:column;justify-content:center">
+                <div style="font-size:7px;color:rgba(196,162,80,.5);letter-spacing:.2em;text-transform:uppercase;font-family:sans-serif;margin-bottom:8px">Multi-Vendor Marketplace</div>
+                <div style="font-family:Georgia,serif;font-size:20px;font-weight:400;color:rgba(255,255,255,.88);line-height:1.1;margin-bottom:12px">Discover<br/><em style="color:#c4a250">luxury</em><br/>redefined.</div>
+                <div style="background:#c4a250;color:#0d0a05;font-size:8px;padding:7px 12px;font-family:sans-serif;font-weight:700;letter-spacing:.06em;display:inline-block">SHOP NOW</div>
               </div>
-              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid rgba(255,255,255,.08)">
-                <div style="padding:10px 6px;text-align:center;border-right:1px solid rgba(255,255,255,.06)"><div style="font-family:Georgia,serif;font-size:14px;color:rgba(255,255,255,.82)">10+</div><div style="font-size:8px;color:rgba(255,255,255,.32);font-family:sans-serif;margin-top:2px">Years</div></div>
-                <div style="padding:10px 6px;text-align:center;border-right:1px solid rgba(255,255,255,.06)"><div style="font-family:Georgia,serif;font-size:14px;color:rgba(255,255,255,.82)">2k+</div><div style="font-size:8px;color:rgba(255,255,255,.32);font-family:sans-serif;margin-top:2px">Patients</div></div>
-                <div style="padding:10px 6px;text-align:center"><div style="font-family:Georgia,serif;font-size:14px;color:rgba(255,255,255,.82)">4.9★</div><div style="font-size:8px;color:rgba(255,255,255,.32);font-family:sans-serif;margin-top:2px">Google</div></div>
+              <div style="display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:1px;background:rgba(196,162,80,.08)">
+                <div style="background:#181208;display:flex;align-items:center;justify-content:center"><div style="width:40px;height:40px;border-radius:50%;background:rgba(196,162,80,.08);border:1px solid rgba(196,162,80,.2)"></div></div>
+                <div style="background:#140f07;display:flex;align-items:center;justify-content:center"><div style="width:36px;height:36px;border-radius:4px;background:rgba(196,162,80,.06);border:1px solid rgba(196,162,80,.15)"></div></div>
+                <div style="background:#130e06;display:flex;align-items:center;justify-content:center"><div style="width:32px;height:48px;background:rgba(196,162,80,.06);border:1px solid rgba(196,162,80,.12)"></div></div>
+                <div style="background:#160f05;display:flex;align-items:center;justify-content:center"><div style="width:44px;height:32px;border-radius:2px;background:rgba(196,162,80,.05);border:1px solid rgba(196,162,80,.1)"></div></div>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div class="proj-info">
-        <div class="proj-cat">Chiropractic · Chicago, IL</div>
-        <div class="proj-name">Green Street Chiropractic</div>
-        <p class="proj-desc">Sage, cream and terracotta. Organic dot-grid, split hero. The warmth of a Kinfolk editorial meets evidence-based medicine — now fully booked.</p>
+        <div class="proj-cat">Ecommerce · Multi-Vendor Marketplace</div>
+        <div class="proj-name">Luxe Collective</div>
+        <p class="proj-desc">A premium multi-vendor luxury marketplace — dark gold aesthetic, curated brand pages, seller dashboards, and a checkout experience that matches the calibre of the product.</p>
         <div class="proj-pills">
-          <div class="proj-pill"><span class="up">↑</span> Page 6 → #1</div>
-          <div class="proj-pill">+145% new patients</div>
-          <div class="proj-pill">44 days to page 1</div>
+          <div class="proj-pill">Multi-vendor</div>
+          <div class="proj-pill">Luxury ecommerce</div>
+          <div class="proj-pill">Seller dashboard</div>
         </div>
-        <a href="https://greenstreet-chiro.vercel.app" target="_blank" rel="noopener" class="proj-link">View live site <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m4-3h6v6m-11 5L21 3"/></svg></a>
+        <a href="https://luxe-collective-multi-vendor.netlify.app" target="_blank" rel="noopener" class="proj-link">View live site <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m4-3h6v6m-11 5L21 3"/></svg></a>
+      </div>
+    </div>
+
+    <!-- ─ MedSync ─ -->
+    <div class="project rev">
+      <div class="proj-visual" style="background:linear-gradient(145deg,#040e1a 0%,#071525 50%,#050f1c 100%)">
+        <div class="proj-bg" style="background:linear-gradient(145deg,#040e1a 0%,#071525 50%,#050f1c 100%)"></div>
+        <div class="proj-browser">
+          <div class="pb-bar" style="background:#060f1e">
+            <div class="pb-dots"><span></span><span></span><span></span></div>
+            <div class="pb-url" style="background:#0a1628;border:1px solid #0e2040;color:#4a78a0">medsync-healthcare-patient-portal.netlify.app</div>
+          </div>
+          <div style="background:#050d1a;height:260px;overflow:hidden;position:relative">
+            <div style="background:#071422;height:32px;border-bottom:1px solid rgba(56,189,248,.1);display:flex;align-items:center;padding:0 14px;justify-content:space-between">
+              <div style="display:flex;align-items:center;gap:6px">
+                <div style="width:16px;height:16px;background:#38bdf8;border-radius:3px;display:flex;align-items:center;justify-content:center"><span style="font-size:9px;color:white;font-weight:700">M</span></div>
+                <span style="font-family:sans-serif;font-size:10px;font-weight:700;color:white">Med<span style="color:#38bdf8">Sync</span></span>
+              </div>
+              <div style="background:rgba(56,189,248,.12);border:1px solid rgba(56,189,248,.25);color:#38bdf8;font-size:8px;padding:3px 10px;border-radius:12px;font-family:sans-serif">Patient Portal</div>
+            </div>
+            <div style="padding:12px 14px;position:relative;z-index:1">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px">
+                <div style="background:#081828;border:1px solid rgba(56,189,248,.1);border-radius:6px;padding:10px">
+                  <div style="font-size:7px;color:rgba(255,255,255,.35);font-family:sans-serif;margin-bottom:4px;text-transform:uppercase;letter-spacing:.08em">Next Appointment</div>
+                  <div style="font-size:11px;font-weight:600;color:white;font-family:sans-serif">Apr 24 · 09:30</div>
+                  <div style="font-size:8px;color:#38bdf8;font-family:sans-serif;margin-top:2px">Dr. Chen · Cardiology</div>
+                </div>
+                <div style="background:#081828;border:1px solid rgba(56,189,248,.1);border-radius:6px;padding:10px">
+                  <div style="font-size:7px;color:rgba(255,255,255,.35);font-family:sans-serif;margin-bottom:4px;text-transform:uppercase;letter-spacing:.08em">Prescriptions</div>
+                  <div style="font-size:11px;font-weight:600;color:white;font-family:sans-serif">3 Active</div>
+                  <div style="font-size:8px;color:#22c55e;font-family:sans-serif;margin-top:2px">↻ Refill available</div>
+                </div>
+              </div>
+              <div style="background:#081828;border:1px solid rgba(56,189,248,.1);border-radius:6px;padding:10px">
+                <div style="font-size:7px;color:rgba(255,255,255,.3);font-family:sans-serif;margin-bottom:8px;text-transform:uppercase;letter-spacing:.08em">Recent Results</div>
+                <div style="display:flex;flex-direction:column;gap:5px">
+                  <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:8px;color:rgba(255,255,255,.6);font-family:sans-serif">Blood Panel</span><span style="font-size:8px;background:rgba(34,197,94,.12);color:#22c55e;padding:2px 7px;border-radius:10px;font-family:sans-serif">Normal</span></div>
+                  <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-size:8px;color:rgba(255,255,255,.6);font-family:sans-serif">ECG</span><span style="font-size:8px;background:rgba(34,197,94,.12);color:#22c55e;padding:2px 7px;border-radius:10px;font-family:sans-serif">Normal</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="proj-info">
+        <div class="proj-cat">Healthcare · Patient Portal</div>
+        <div class="proj-name">MedSync</div>
+        <p class="proj-desc">A full healthcare patient portal — appointments, prescriptions, lab results, and messaging. Built with the security and clean UX that patients and practitioners expect.</p>
+        <div class="proj-pills">
+          <div class="proj-pill">Healthcare platform</div>
+          <div class="proj-pill">Patient dashboard</div>
+          <div class="proj-pill">Secure portal</div>
+        </div>
+        <a href="https://medsync-healthcare-patient-portal.netlify.app" target="_blank" rel="noopener" class="proj-link">View live site <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m4-3h6v6m-11 5L21 3"/></svg></a>
+      </div>
+    </div>
+
+    <!-- ─ BrewCo ─ -->
+    <div class="project flip rev">
+      <div class="proj-visual" style="background:linear-gradient(145deg,#100904 0%,#1e1006 50%,#160c04 100%)">
+        <div class="proj-bg" style="background:linear-gradient(145deg,#100904 0%,#1e1006 50%,#160c04 100%)"></div>
+        <div class="proj-browser">
+          <div class="pb-bar" style="background:#130b04">
+            <div class="pb-dots"><span></span><span></span><span></span></div>
+            <div class="pb-url" style="background:#1c1006;border:1px solid #2e1a08;color:#8a6040">brewco-craft-beer-shopify-store.netlify.app</div>
+          </div>
+          <div style="background:#100804;height:260px;overflow:hidden;position:relative">
+            <div style="background:#180d05;height:32px;border-bottom:1px solid rgba(234,88,12,.2);display:flex;align-items:center;padding:0 14px;justify-content:space-between">
+              <span style="font-family:sans-serif;font-size:13px;font-weight:900;text-transform:uppercase;color:white;letter-spacing:.06em">BREW<span style="color:#ea580c">CO</span></span>
+              <div style="display:flex;gap:8px;align-items:center">
+                <span style="font-size:8px;color:rgba(255,255,255,.35);font-family:sans-serif">Shop · Our Story · Taproom</span>
+              </div>
+            </div>
+            <div style="padding:16px 16px;display:flex;flex-direction:column;gap:10px">
+              <div style="display:flex;align-items:center;gap:8px">
+                <div style="width:3px;height:40px;background:#ea580c;border-radius:2px;flex-shrink:0"></div>
+                <div>
+                  <div style="font-size:7px;color:rgba(234,88,12,.7);letter-spacing:.2em;text-transform:uppercase;font-family:sans-serif;margin-bottom:3px">Small Batch · Craft Beer</div>
+                  <div style="font-family:sans-serif;font-size:22px;font-weight:900;color:white;text-transform:uppercase;line-height:.95;letter-spacing:.01em">BREWED FOR<br/>THE <span style="color:#ea580c">BOLD.</span></div>
+                </div>
+              </div>
+              <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px">
+                <div style="background:#1e1008;border:1px solid rgba(234,88,12,.15);border-radius:4px;padding:10px;text-align:center">
+                  <div style="width:28px;height:48px;background:linear-gradient(to bottom,rgba(234,88,12,.4) 0%,rgba(120,40,8,.5) 100%);border-radius:3px;margin:0 auto 5px;border:1px solid rgba(234,88,12,.2)"></div>
+                  <div style="font-size:7px;color:rgba(255,255,255,.6);font-family:sans-serif">Dark IPA</div>
+                  <div style="font-size:8px;font-weight:700;color:#ea580c;font-family:sans-serif">$18</div>
+                </div>
+                <div style="background:#1e1008;border:1px solid rgba(234,88,12,.25);border-radius:4px;padding:10px;text-align:center;position:relative">
+                  <div style="position:absolute;top:4px;right:4px;background:#ea580c;font-size:6px;color:white;padding:1px 4px;border-radius:2px;font-family:sans-serif">NEW</div>
+                  <div style="width:28px;height:48px;background:linear-gradient(to bottom,rgba(234,180,12,.4) 0%,rgba(180,100,8,.5) 100%);border-radius:3px;margin:0 auto 5px;border:1px solid rgba(234,88,12,.2)"></div>
+                  <div style="font-size:7px;color:rgba(255,255,255,.6);font-family:sans-serif">Pale Ale</div>
+                  <div style="font-size:8px;font-weight:700;color:#ea580c;font-family:sans-serif">$16</div>
+                </div>
+                <div style="background:#1e1008;border:1px solid rgba(234,88,12,.15);border-radius:4px;padding:10px;text-align:center">
+                  <div style="width:28px;height:48px;background:linear-gradient(to bottom,rgba(60,20,5,.8) 0%,rgba(30,10,3,.9) 100%);border-radius:3px;margin:0 auto 5px;border:1px solid rgba(234,88,12,.15)"></div>
+                  <div style="font-size:7px;color:rgba(255,255,255,.6);font-family:sans-serif">Stout</div>
+                  <div style="font-size:8px;font-weight:700;color:#ea580c;font-family:sans-serif">$19</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="proj-info">
+        <div class="proj-cat">Ecommerce · Craft Beer · Shopify</div>
+        <div class="proj-name">BrewCo</div>
+        <p class="proj-desc">A Shopify store for a craft beer brand — bold dark aesthetic, product pages with tasting notes, taproom info, and an online shop built to move cases.</p>
+        <div class="proj-pills">
+          <div class="proj-pill">Shopify store</div>
+          <div class="proj-pill">Product ecommerce</div>
+          <div class="proj-pill">Dark brand UI</div>
+        </div>
+        <a href="https://brewco-craft-beer-shopify-store.netlify.app" target="_blank" rel="noopener" class="proj-link">View live site <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m4-3h6v6m-11 5L21 3"/></svg></a>
+      </div>
+    </div>
+
+    <!-- ─ EduFlow ─ -->
+    <div class="project rev">
+      <div class="proj-visual" style="background:linear-gradient(145deg,#07050f 0%,#100e20 50%,#0c0a1a 100%)">
+        <div class="proj-bg" style="background:linear-gradient(145deg,#07050f 0%,#100e20 50%,#0c0a1a 100%)"></div>
+        <div class="proj-browser">
+          <div class="pb-bar" style="background:#090717">
+            <div class="pb-dots"><span></span><span></span><span></span></div>
+            <div class="pb-url" style="background:#100e22;border:1px solid #1a163a;color:#6a60a0">eduflow-online-course-platform.netlify.app</div>
+          </div>
+          <div style="background:#080616;height:260px;overflow:hidden;position:relative">
+            <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 70% 30%,rgba(139,92,246,.08) 0%,transparent 60%)"></div>
+            <div style="background:#0d0b1e;height:32px;border-bottom:1px solid rgba(139,92,246,.12);display:flex;align-items:center;padding:0 14px;justify-content:space-between;position:relative;z-index:1">
+              <span style="font-family:sans-serif;font-size:11px;font-weight:800;color:white;letter-spacing:.02em">Edu<span style="color:#8b5cf6">Flow</span></span>
+              <div style="background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.3);color:#8b5cf6;font-size:8px;padding:3px 10px;border-radius:10px;font-family:sans-serif">Enroll Now</div>
+            </div>
+            <div style="padding:14px 16px;position:relative;z-index:1">
+              <div style="margin-bottom:10px">
+                <div style="font-size:7px;color:rgba(139,92,246,.65);letter-spacing:.16em;text-transform:uppercase;font-family:sans-serif;margin-bottom:4px">Online Course Platform</div>
+                <div style="font-family:sans-serif;font-size:18px;font-weight:800;color:white;line-height:1.1;margin-bottom:8px">Learn without<br/><span style="color:#8b5cf6">limits.</span></div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:6px">
+                <div style="background:#110e24;border:1px solid rgba(139,92,246,.12);border-radius:5px;padding:8px 10px;display:flex;align-items:center;gap:8px">
+                  <div style="width:26px;height:26px;border-radius:4px;background:rgba(139,92,246,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-size:10px">🎨</span></div>
+                  <div style="flex:1"><div style="font-size:8px;font-weight:600;color:rgba(255,255,255,.8);font-family:sans-serif">UI/UX Design Mastery</div><div style="font-size:7px;color:rgba(255,255,255,.3);font-family:sans-serif;margin-top:1px">48 lessons · 4,120 students</div></div>
+                  <span style="font-size:8px;font-weight:700;color:#8b5cf6;font-family:sans-serif">$97</span>
+                </div>
+                <div style="background:#110e24;border:1px solid rgba(139,92,246,.2);border-radius:5px;padding:8px 10px;display:flex;align-items:center;gap:8px">
+                  <div style="width:26px;height:26px;border-radius:4px;background:rgba(139,92,246,.2);display:flex;align-items:center;justify-content:center;flex-shrink:0"><span style="font-size:10px">💻</span></div>
+                  <div style="flex:1"><div style="font-size:8px;font-weight:600;color:rgba(255,255,255,.8);font-family:sans-serif">Full-Stack Development</div><div style="font-size:7px;color:rgba(255,255,255,.3);font-family:sans-serif;margin-top:1px">120 lessons · 8,042 students</div></div>
+                  <span style="font-size:8px;font-weight:700;color:#8b5cf6;font-family:sans-serif">$197</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="proj-info">
+        <div class="proj-cat">EdTech · Online Course Platform</div>
+        <div class="proj-name">EduFlow</div>
+        <p class="proj-desc">A full online learning platform — course library, student dashboards, progress tracking, enrolment flows, and instructor pages built to convert and retain learners.</p>
+        <div class="proj-pills">
+          <div class="proj-pill">Course platform</div>
+          <div class="proj-pill">EdTech</div>
+          <div class="proj-pill">Student dashboard</div>
+        </div>
+        <a href="https://eduflow-online-course-platform.netlify.app" target="_blank" rel="noopener" class="proj-link">View live site <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m4-3h6v6m-11 5L21 3"/></svg></a>
       </div>
     </div>
 
