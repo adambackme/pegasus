@@ -3,22 +3,19 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>The Pegasus — Web Design & Local SEO</title>
-<meta name="description" content="We build websites and local SEO for small businesses. Most clients reach page 1 within 30 days. Free audit, delivered by email."/>
+<title>The Pegasus — Web Design, Ecommerce & Digital Growth Agency</title>
+<meta name="description" content="We build high-converting websites for every kind of business — ecommerce brands, local services, online businesses, DTC brands, restaurants, and more. Custom design. Real results."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Fraunces:ital,opsz,wght@1,9..144,300;1,9..144,400;1,9..144,600&display=swap" rel="stylesheet"/>
 <style>
 
 /* ══════════════════════════════════════════
-   THE PEGASUS v4
+   THE PEGASUS v5 — Full-Spectrum Agency
    Design principle: space is the message.
-   If a section doesn't earn its real estate,
-   it doesn't exist.
    ══════════════════════════════════════════ */
 
 :root {
-  /* Palette — warm off-white, pure black, one electric accent */
   --cream:      #ffffff;
   --cream-2:    #f5f3ee;
   --cream-3:    #ece9e0;
@@ -140,7 +137,6 @@ p { color: var(--muted); line-height: 1.82; }
   background: var(--cream);
 }
 
-/* Dot grid */
 .hero::before {
   content: '';
   position: absolute; inset: 0; pointer-events: none;
@@ -149,7 +145,6 @@ p { color: var(--muted); line-height: 1.82; }
   mask-image: radial-gradient(ellipse 90% 90% at 50% 50%, black 0%, transparent 100%);
 }
 
-/* Bottom glow */
 .hero::after {
   content: '';
   position: absolute; bottom: -120px; right: -120px;
@@ -164,7 +159,6 @@ p { color: var(--muted); line-height: 1.82; }
 }
 @media (max-width: 640px) { .hero-inner { padding: 64px 22px 88px; } }
 
-/* Status pill */
 .hero-status {
   display: inline-flex; align-items: center; gap: 9px;
   font-size: .73rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
@@ -176,7 +170,6 @@ p { color: var(--muted); line-height: 1.82; }
 }
 @keyframes breathe { 0%,100%{box-shadow:0 0 0 0 rgba(21,128,61,.5)} 50%{box-shadow:0 0 0 7px rgba(21,128,61,0)} }
 
-/* THE headline — this is the whole hero */
 .hero-h {
   font-family: var(--d);
   font-size: clamp(4.5rem, 10vw, 10.5rem);
@@ -192,10 +185,9 @@ p { color: var(--muted); line-height: 1.82; }
   font-weight: 400;
   color: var(--blue);
   letter-spacing: -.01em;
-  font-size: 1.05em; /* slightly larger for optical balance */
+  font-size: 1.05em;
 }
 
-/* Bottom row — desc + CTA */
 .hero-footer {
   display: grid; grid-template-columns: 1fr 1fr;
   gap: 64px; align-items: end;
@@ -225,7 +217,6 @@ p { color: var(--muted); line-height: 1.82; }
 .hero-proof-stars { color: var(--amber); letter-spacing: 1px; }
 .hero-proof-sep { width: 1px; height: 14px; background: var(--line); }
 
-/* Scroll hint */
 .hero-scroll {
   position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
   display: flex; flex-direction: column; align-items: center; gap: 8px;
@@ -242,7 +233,7 @@ p { color: var(--muted); line-height: 1.82; }
   overflow: hidden; white-space: nowrap;
   border-top: 1px solid rgba(255,255,255,.05);
 }
-.ticker-t { display: inline-flex; animation: tick 40s linear infinite; }
+.ticker-t { display: inline-flex; animation: tick 50s linear infinite; }
 .ticker-t:hover { animation-play-state: paused; }
 .ti { display: inline-flex; align-items: center; gap: 9px; padding: 0 44px; font-size: .74rem; font-weight: 400; letter-spacing: .06em; color: rgba(255,255,255,.35); }
 .ti strong { color: rgba(255,255,255,.7); font-weight: 500; }
@@ -287,10 +278,52 @@ p { color: var(--muted); line-height: 1.82; }
 .btn-line:hover { border-color: var(--ink); color: var(--black); }
 
 
+/* ══ NICHES / EVERYTHING WE DO ═══════════ */
+
+.niches-section {
+  background: var(--cream-2);
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.niches-head { margin-bottom: 72px; }
+.niches-head .section-h { font-size: clamp(2.4rem, 4vw, 3.6rem); max-width: 16ch; margin-bottom: 18px; }
+.niches-head p { color: var(--muted); font-size: 1rem; line-height: 1.82; max-width: 520px; }
+
+.niches-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px;
+  background: var(--line); border: 1px solid var(--line);
+}
+@media (max-width: 860px) { .niches-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 480px) { .niches-grid { grid-template-columns: 1fr 1fr; } }
+
+.niche-card {
+  background: var(--cream-2);
+  padding: 36px 32px;
+  transition: background .2s;
+  position: relative; overflow: hidden;
+}
+.niche-card:hover { background: white; }
+.niche-icon {
+  font-size: 1.6rem; margin-bottom: 14px; display: block;
+  transition: transform .2s;
+}
+.niche-card:hover .niche-icon { transform: scale(1.1); }
+.niche-card h3 {
+  font-size: .92rem; font-weight: 700; color: var(--black);
+  margin-bottom: 8px; letter-spacing: -.01em;
+}
+.niche-card p { font-size: .78rem; color: var(--muted); line-height: 1.65; }
+.niche-bg {
+  position: absolute; bottom: -10px; right: -4px;
+  font-size: 5rem; font-weight: 900; opacity: .04;
+  color: var(--blue); line-height: 1; pointer-events: none;
+  font-family: var(--d);
+}
+
+
 /* ══ PROBLEM / SERP ═══════════════════════ */
 
 .problem-section {
-  background: var(--cream-2);
+  background: var(--cream);
   border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
 }
 .problem-grid {
@@ -372,10 +405,6 @@ p { color: var(--muted); line-height: 1.82; }
 .work-intro .section-h { font-size: clamp(2.4rem, 4.5vw, 4rem); }
 .work-intro-right p { color: var(--muted); font-size: 1rem; line-height: 1.82; margin-bottom: 22px; }
 
-/* ─ Project cards ─
-   Each card is full width. Visual takes 60%, info takes 40%.
-   The mockup IS the feature, not a sidebar. */
-
 .projects { display: flex; flex-direction: column; gap: 3px; }
 
 .project {
@@ -395,7 +424,6 @@ p { color: var(--muted); line-height: 1.82; }
   .project.flip .proj-info   { order: 2; border: none; border-top: 1px solid var(--line); }
 }
 
-/* Visual panel */
 .proj-visual {
   position: relative; overflow: hidden;
   min-height: 360px;
@@ -406,13 +434,12 @@ p { color: var(--muted); line-height: 1.82; }
 }
 .project:hover .proj-bg { transform: scale(1.03); }
 
-/* Project backgrounds — each genuinely distinct */
 .pv-dental { background: linear-gradient(145deg,#f0ece3 0%,#e4f0e8 55%,#cce4d8 100%); }
 .pv-law    { background: linear-gradient(145deg,#050505 0%,#100f08 50%,#060602 100%); }
 .pv-plumb  { background: linear-gradient(145deg,#081523 0%,#0f2035 50%,#162844 100%); }
 .pv-chiro  { background: linear-gradient(145deg,#faf6ee 0%,#eaf3ec 50%,#d8ecdf 100%); }
+.pv-ecom   { background: linear-gradient(145deg,#0f0f0f 0%,#181418 50%,#0c0c10 100%); }
 
-/* Browser frame floated upward — large and legible */
 .proj-browser {
   position: absolute;
   bottom: 0; left: 50%;
@@ -437,7 +464,6 @@ p { color: var(--muted); line-height: 1.82; }
 .pb-dots span:nth-child(3) { background: #28c840; }
 .pb-url { flex: 1; border-radius: 10px; padding: 4px 12px; font-size: .68rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-/* Info panel */
 .proj-info {
   padding: 52px 52px;
   display: flex; flex-direction: column; justify-content: center;
@@ -624,7 +650,7 @@ p { color: var(--muted); line-height: 1.82; }
 }
 .fq.o .fq-icon { background: var(--blue); border-color: var(--blue); color: white; transform: rotate(45deg); }
 .fq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
-.fq.o .fq-a { max-height: 280px; }
+.fq.o .fq-a { max-height: 320px; }
 .fq-a-in { padding: 0 0 22px; font-size: .88rem; color: var(--muted); line-height: 1.8; }
 
 
@@ -662,7 +688,6 @@ p { color: var(--muted); line-height: 1.82; }
 .cc { display: flex; align-items: center; gap: 10px; font-size: .84rem; color: rgba(255,255,255,.45); }
 .cc::before { content: '✓'; color: #4ade80; font-weight: 700; flex-shrink: 0; }
 
-/* Form */
 .cta-form-title { font-family: var(--d); font-size: 1.15rem; font-weight: 700; color: rgba(255,255,255,.85); margin-bottom: 5px; }
 .cta-form-sub { font-size: .8rem; color: rgba(255,255,255,.32); margin-bottom: 20px; }
 .cta-form { display: flex; flex-direction: column; gap: 10px; }
@@ -726,155 +751,52 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
   .rev { opacity: 1; transform: none; }
 }
 
-/* ══ MOBILE FIXES (max-width: 768px) ══════
-   Surgical corrections only — desktop untouched
-   ════════════════════════════════════════════ */
+/* ══ MOBILE FIXES ═════════════════════════ */
 @media (max-width: 768px) {
-
-  /* Sections less cramped */
   .section { padding: 72px 0; }
-
-  /* Hero — tighter top padding on short screens */
   .hero-inner { padding: 64px 22px 88px; }
   .hero-h { font-size: clamp(3.2rem, 11vw, 4.8rem); }
   .hero-footer { margin-top: 40px; padding-top: 32px; gap: 24px; }
   .hero-desc { font-size: 1rem; }
-
-  /* Problem section */
   .problem-grid { gap: 40px; }
-
-  /* Work intro — less overwhelming */
   .work-intro { margin-bottom: 48px; }
   .work-intro .section-h { font-size: clamp(2rem, 8vw, 3rem); }
-
-  /* ─ Project cards on mobile ─
-     Visual panel: shorter, browser mockup fills it properly
-     Info panel: comfortable padding, no collision */
   .projects { gap: 2px; }
-
-  .project,
-  .project.flip {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
+  .project, .project.flip { grid-template-columns: 1fr; min-height: auto; }
   .project.flip .proj-visual { order: 1; }
   .project.flip .proj-info   { order: 2; border-right: none; border-top: 1px solid var(--line); }
   .project.flip .proj-info   { border-left: none; }
-
-  /* Visual panel: fixed height so browser mockup has room */
-  .proj-visual {
-    min-height: 280px;
-    height: 280px;
-  }
-
-  /* Browser mockup: wider on mobile so content is legible */
-  .proj-browser {
-    width: 88%;
-    bottom: 0;
-  }
-  /* Disable the hover lift on mobile (no hover state) */
-  .project:hover .proj-browser {
-    transform: translateX(-50%) translateY(0);
-  }
-
-  /* Hide the 260px-tall inline preview divs on mobile
-     and replace with a simpler fixed-height version */
-  .proj-browser .pb-preview-tall {
-    height: 180px !important;
-  }
-  /* All the inline preview divs inside browsers: cap height */
-  .proj-browser > div:last-child {
-    max-height: 200px;
-    overflow: hidden;
-  }
-
-  /* Info panel */
-  .proj-info {
-    padding: 32px 24px;
-    border-left: none;
-  }
+  .proj-visual { min-height: 280px; height: 280px; }
+  .proj-browser { width: 88%; bottom: 0; }
+  .project:hover .proj-browser { transform: translateX(-50%) translateY(0); }
+  .proj-browser .pb-preview-tall { height: 180px !important; }
+  .proj-browser > div:last-child { max-height: 200px; overflow: hidden; }
+  .proj-info { padding: 32px 24px; border-left: none; }
   .proj-name { font-size: 1.5rem; }
   .proj-desc { font-size: .87rem; }
-
-  /* All inner preview grids: single column on mobile, capped height */
-  .proj-preview {
-    display: flex !important;
-    flex-direction: column !important;
-    height: 180px !important;
-    overflow: hidden;
-  }
-  /* Dark previews (law, plumbing) */
-  .proj-preview-dark {
-    height: 180px !important;
-    overflow: hidden;
-  }
-  /* Plumbing card inner layout — also needs collapsing */
-  .proj-plumb-inner {
-    display: flex !important;
-    flex-direction: column !important;
-    height: auto !important;
-    overflow: hidden;
-  }
-  /* Hide the contact form panel on mobile (too cramped) */
-  .proj-plumb-inner > div:last-child {
-    display: none !important;
-  }
-
-  /* Services — show price as inline badge below description */
-  .svc-row {
-    grid-template-columns: 44px 1fr;
-    gap: 0;
-    padding: 36px 0;
-    position: relative;
-  }
-  .svc-price {
-    display: block !important;
-    grid-column: 2;
-    grid-row: 2;
-    text-align: left;
-    font-size: 1.1rem;
-    padding: 14px 0 0;
-    margin-top: 0;
-    color: rgba(255,255,255,.55);
-    border-top: none;
-    white-space: nowrap;
-  }
-  .svc-price small {
-    display: inline;
-    margin-left: 5px;
-    font-size: .7rem;
-    color: rgba(255,255,255,.28);
-  }
-  /* Make the svc-row a 2-column, multi-row grid */
-  .svc-row {
-    display: grid;
-    grid-template-columns: 44px 1fr;
-    grid-template-rows: auto auto;
-  }
+  .proj-preview { display: flex !important; flex-direction: column !important; height: 180px !important; overflow: hidden; }
+  .proj-preview-dark { height: 180px !important; overflow: hidden; }
+  .proj-plumb-inner { display: flex !important; flex-direction: column !important; height: auto !important; overflow: hidden; }
+  .proj-plumb-inner > div:last-child { display: none !important; }
+  .svc-row { grid-template-columns: 44px 1fr; gap: 0; padding: 36px 0; position: relative; }
+  .svc-price { display: block !important; grid-column: 2; grid-row: 2; text-align: left; font-size: 1.1rem; padding: 14px 0 0; margin-top: 0; color: rgba(255,255,255,.55); border-top: none; white-space: nowrap; }
+  .svc-price small { display: inline; margin-left: 5px; font-size: .7rem; color: rgba(255,255,255,.28); }
+  .svc-row { display: grid; grid-template-columns: 44px 1fr; grid-template-rows: auto auto; }
   .svc-n { grid-column: 1; grid-row: 1; }
   .svc-body { grid-column: 2; grid-row: 1; }
   .svc-price { grid-column: 2; grid-row: 2; }
-
-  /* Process steps — 2 cols on mobile is already set,
-     but increase padding so watermark numbers don't crowd */
   .step { padding: 36px 28px; }
   .step-bg { font-size: 6rem; bottom: -18px; }
-
-  /* Testimonials */
   .testi-grid { gap: 14px; }
   .tc { padding: 32px 26px; }
-
-  /* FAQ layout */
   .faq-layout { gap: 32px; }
   .faq-left .section-h { font-size: 2rem; }
-
-  /* CTA */
   .cta-section { padding: 80px 0; }
   .cta-inner { gap: 40px; }
   .cta-left h2 { font-size: clamp(2rem, 8vw, 3rem); }
-
-  /* Footer */
   .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .niches-grid { grid-template-columns: 1fr 1fr; }
+  .niche-card { padding: 24px 20px; }
 }
 
 </style>
@@ -888,24 +810,26 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
     The Pegasus
   </a>
   <div class="nav-links">
+    <a href="#niches">What We Do</a>
     <a href="#work">Work</a>
     <a href="#services">Services</a>
     <a href="#process">Process</a>
     <a href="#faq">FAQ</a>
   </div>
   <div style="display:flex;align-items:center;gap:10px">
-    <a href="#cta" class="nav-btn">Free audit →</a>
+    <a href="#cta" class="nav-btn">Get a free proposal →</a>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 <div class="mob" id="mob">
+  <a href="#niches">What We Do</a>
   <a href="#work">Work</a>
   <a href="#services">Services</a>
   <a href="#process">Process</a>
   <a href="#faq">FAQ</a>
-  <a href="#cta" class="mob-cta">Get free audit →</a>
+  <a href="#cta" class="mob-cta">Get free proposal →</a>
 </div>
 
 
@@ -914,28 +838,28 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
   <div class="w hero-inner">
     <div class="hero-status">
       <div class="hero-status-dot"></div>
-      Now accepting US · UK · Europe clients
+      Now accepting clients · US · UK · Europe · Worldwide
     </div>
 
     <h1 class="hero-h" style="animation:fadU .55s ease both">
-      Your business<br/>
-      is <span class="italic">invisible</span><br/>
-      on Google.
+      Your brand.<br/>
+      <span class="italic">Unstoppable</span><br/>
+      online.
     </h1>
 
     <div class="hero-footer">
       <p class="hero-desc">
-        Every day someone in your city searches for what you do — and calls your competitor instead. We build websites and local SEO that fix that. Most clients reach page&nbsp;1 within 30 days.
+        We build high-converting websites and digital experiences for every kind of business — ecommerce brands, local services, online brands, restaurants, DTC companies, agencies, and everything in between. Custom-built from scratch. No templates. No limits.
       </p>
       <div class="hero-right">
         <a href="#cta" class="btn-cta">
-          Get my free audit
+          Get my free proposal
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
         </a>
         <div class="hero-proof">
           <span class="hero-proof-stars">★★★★★</span>
           <span class="hero-proof-sep"></span>
-          <span>50+ businesses now on page 1</span>
+          <span>50+ businesses grown · every niche</span>
         </div>
       </div>
     </div>
@@ -950,20 +874,110 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
 <!-- ═══ TICKER ══════════════════════════════ -->
 <div class="ticker" aria-hidden="true">
   <div class="ticker-t">
-    <span class="ti"><span class="ti-dot"></span><strong>Bright Smile Dentistry, Austin TX</strong>&thinsp;— new patient calls doubled in 6 weeks</span>
+    <span class="ti"><span class="ti-dot"></span><strong>Bright Smile Dentistry, Austin TX</strong>&thinsp;— patient calls doubled in 6 weeks</span>
     <span class="ti"><span class="ti-dot"></span><strong>Laurent Law Group, Miami FL</strong>&thinsp;— +210% contact form submissions</span>
     <span class="ti"><span class="ti-dot"></span><strong>Klein Plumbing, Manchester UK</strong>&thinsp;— page 5 → page 1 in 52 days</span>
-    <span class="ti"><span class="ti-dot"></span><strong>Green Street Chiropractic, Chicago</strong>&thinsp;— fully booked 3 weeks out</span>
+    <span class="ti"><span class="ti-dot"></span><strong>Ember & Oak Candle Co, Portland</strong>&thinsp;— +340% ecommerce revenue in 3 months</span>
+    <span class="ti"><span class="ti-dot"></span><strong>Solaris Skincare, LA</strong>&thinsp;— Shopify store redesign · conversion rate +189%</span>
     <span class="ti"><span class="ti-dot"></span><strong>Peak Auto Service, Denver CO</strong>&thinsp;— ranking for 8 page-1 keywords</span>
-    <span class="ti"><span class="ti-dot"></span><strong>Müller Dental, Berlin</strong>&thinsp;— ranked #1 locally within 41 days</span>
-    <span class="ti"><span class="ti-dot"></span><strong>Bright Smile Dentistry, Austin TX</strong>&thinsp;— new patient calls doubled in 6 weeks</span>
+    <span class="ti"><span class="ti-dot"></span><strong>Roots & Remedy, NYC</strong>&thinsp;— new brand identity + online store launch</span>
+    <span class="ti"><span class="ti-dot"></span><strong>Green Street Chiropractic, Chicago</strong>&thinsp;— fully booked 3 weeks out</span>
+    <span class="ti"><span class="ti-dot"></span><strong>Bright Smile Dentistry, Austin TX</strong>&thinsp;— patient calls doubled in 6 weeks</span>
     <span class="ti"><span class="ti-dot"></span><strong>Laurent Law Group, Miami FL</strong>&thinsp;— +210% contact form submissions</span>
     <span class="ti"><span class="ti-dot"></span><strong>Klein Plumbing, Manchester UK</strong>&thinsp;— page 5 → page 1 in 52 days</span>
-    <span class="ti"><span class="ti-dot"></span><strong>Green Street Chiropractic, Chicago</strong>&thinsp;— fully booked 3 weeks out</span>
+    <span class="ti"><span class="ti-dot"></span><strong>Ember & Oak Candle Co, Portland</strong>&thinsp;— +340% ecommerce revenue in 3 months</span>
+    <span class="ti"><span class="ti-dot"></span><strong>Solaris Skincare, LA</strong>&thinsp;— Shopify store redesign · conversion rate +189%</span>
     <span class="ti"><span class="ti-dot"></span><strong>Peak Auto Service, Denver CO</strong>&thinsp;— ranking for 8 page-1 keywords</span>
-    <span class="ti"><span class="ti-dot"></span><strong>Müller Dental, Berlin</strong>&thinsp;— ranked #1 locally within 41 days</span>
+    <span class="ti"><span class="ti-dot"></span><strong>Roots & Remedy, NYC</strong>&thinsp;— new brand identity + online store launch</span>
+    <span class="ti"><span class="ti-dot"></span><strong>Green Street Chiropractic, Chicago</strong>&thinsp;— fully booked 3 weeks out</span>
   </div>
 </div>
+
+
+<!-- ═══ NICHES — EVERYTHING WE DO ═══════════ -->
+<section class="niches-section section" id="niches">
+  <div class="w">
+    <div class="niches-head rev">
+      <div class="eyebrow">Every niche. Every brand.</div>
+      <h2 class="section-h">We build for<br/><span class="f">every business.</span></h2>
+      <p>Local service? Ecommerce brand? DTC startup? Restaurant? Agency? Doesn't matter. If you need a website that works, we build it from scratch — designed specifically for your audience and your goals. No templates, no limits, no niche we can't handle.</p>
+    </div>
+    <div class="niches-grid">
+      <div class="niche-card rev">
+        <span class="niche-icon">🛍️</span>
+        <h3>Ecommerce Brands</h3>
+        <p>Shopify, WooCommerce, or custom. High-converting product pages, fast checkouts, brand identity baked in.</p>
+        <div class="niche-bg">E</div>
+      </div>
+      <div class="niche-card rev">
+        <span class="niche-icon">🏷️</span>
+        <h3>DTC Brands</h3>
+        <p>Direct-to-consumer brands that need to stand out. Compelling storytelling, premium design, built to convert cold traffic.</p>
+        <div class="niche-bg">D</div>
+      </div>
+      <div class="niche-card rev">
+        <span class="niche-icon">💄</span>
+        <h3>Beauty & Skincare</h3>
+        <p>Luxury feel, editorial photography integration, product-first layouts that make customers hit "add to cart."</p>
+        <div class="niche-bg">B</div>
+      </div>
+      <div class="niche-card rev">
+        <span class="niche-icon">👗</span>
+        <h3>Fashion & Apparel</h3>
+        <p>Clean lookbook layouts, size guides, collection pages — built to feel like a premium brand from first scroll.</p>
+        <div class="niche-bg">F</div>
+      </div>
+      <div class="niche-card rev">
+        <span class="niche-icon">🍽️</span>
+        <h3>Restaurants & Food</h3>
+        <p>Menu integration, reservation widgets, local SEO — sites that drive foot traffic and online orders.</p>
+        <div class="niche-bg">R</div>
+      </div>
+      <div class="niche-card rev">
+        <span class="niche-icon">⚖️</span>
+        <h3>Law & Professional</h3>
+        <p>Authority design for lawyers, accountants, consultants. Trust signals and lead-gen built into every page.</p>
+        <div class="niche-bg">L</div>
+      </div>
+      <div class="niche-card rev">
+        <span class="niche-icon">🔧</span>
+        <h3>Trades & Home Services</h3>
+        <p>Plumbers, HVAC, electricians, roofers — call-optimised, local SEO ready, built to rank and convert.</p>
+        <div class="niche-bg">T</div>
+      </div>
+      <div class="niche-card rev">
+        <span class="niche-icon">🏥</span>
+        <h3>Health & Wellness</h3>
+        <p>Dentists, chiropractors, physios, gyms — warm, trustworthy designs that book appointments on autopilot.</p>
+        <div class="niche-bg">H</div>
+      </div>
+      <div class="niche-card rev">
+        <span class="niche-icon">🏠</span>
+        <h3>Real Estate</h3>
+        <p>Property listing integration, agent profiles, lead capture. Sites that attract buyers and seller leads 24/7.</p>
+        <div class="niche-bg">R</div>
+      </div>
+      <div class="niche-card rev">
+        <span class="niche-icon">🎓</span>
+        <h3>Education & Coaching</h3>
+        <p>Course platforms, coaching sites, memberships — professional presence that sells your expertise.</p>
+        <div class="niche-bg">E</div>
+      </div>
+      <div class="niche-card rev">
+        <span class="niche-icon">🕯️</span>
+        <h3>Lifestyle & Home Goods</h3>
+        <p>Candles, home décor, artisan goods — aesthetic-first design that builds a brand, not just a store.</p>
+        <div class="niche-bg">L</div>
+      </div>
+      <div class="niche-card rev">
+        <span class="niche-icon">🚀</span>
+        <h3>Startups & Tech</h3>
+        <p>SaaS landing pages, product launches, investor-ready. Clean, modern, built to grow with you.</p>
+        <div class="niche-bg">S</div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- ═══ PROBLEM ══════════════════════════════ -->
@@ -972,11 +986,11 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
     <div class="problem-grid">
       <div class="problem-text rev">
         <div class="eyebrow">The real cost</div>
-        <h2 class="section-h">While you read this,<br/>someone just called<br/>your <span class="f">competitor.</span></h2>
-        <p>When someone in your city searches for what you do, Google decides who they call. 93% of people never scroll past page 1. If you're not there, you don't exist — no matter how good you are.</p>
-        <p>This isn't a marketing problem. It's a visibility problem. We fix visibility.</p>
+        <h2 class="section-h">While you read this,<br/>someone just chose<br/>your <span class="f">competitor.</span></h2>
+        <p>Whether it's Google, Instagram, or Google Shopping — customers make a decision in under 8 seconds. If your website doesn't instantly communicate value, trust and professionalism, they're gone. That sale went somewhere else.</p>
+        <p>It doesn't matter what niche you're in. A bad website costs you more than any marketing budget ever will. We fix that.</p>
         <a href="#cta" class="btn-solid" style="margin-top:8px">
-          See where you rank
+          Get my free proposal
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
         </a>
       </div>
@@ -985,31 +999,31 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
       <div class="serp-card rev">
         <div class="serp-chrome">
           <div class="s-dots"><span></span><span></span><span></span></div>
-          <div class="s-url">google.com/search?q=dentist+in+austin+tx</div>
+          <div class="s-url">google.com/search?q=best+skincare+brand+online</div>
         </div>
         <div class="serp-body">
           <div class="s-bar">
             <svg class="s-bar-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-            <span>dentist in austin tx</span>
+            <span>best skincare brand online</span>
           </div>
-          <div class="s-meta">About 2,840,000 results (0.42 seconds)</div>
+          <div class="s-meta">About 4,120,000 results (0.38 seconds)</div>
           <div class="s-tabs">
             <div class="s-tab" id="t-before" onclick="sBefore()">Before Pegasus</div>
             <div class="s-tab on" id="t-after" onclick="sAfter()">After Pegasus</div>
           </div>
 
           <div id="s-before" style="display:none">
-            <div class="s-result"><div class="s-domain">austindentalpros.com</div><div class="s-title">Austin Dental Pros — Family & Cosmetic Dentistry</div><div class="s-snip">Experienced Austin dentists. Book online today.</div><div class="s-pos">#1</div></div>
-            <div class="s-result"><div class="s-domain">smilesofaustin.com</div><div class="s-title">Smiles of Austin | Dentist Near Me</div><div class="s-snip">Compassionate dental care for the whole family.</div><div class="s-pos">#2</div></div>
-            <div class="s-result"><div class="s-domain">capitalcitydental.com</div><div class="s-title">Capital City Dental | Austin TX</div><div class="s-snip">Serving Austin families for over 20 years.</div><div class="s-pos">#3</div></div>
-            <div class="s-warn">⚠ Your business doesn't appear on page 1. Potential customers are calling your competitors right now.</div>
+            <div class="s-result"><div class="s-domain">cerave.com</div><div class="s-title">CeraVe — Moisturizing Cream for Dry Skin</div><div class="s-snip">Developed with dermatologists. Shop online.</div><div class="s-pos">#1</div></div>
+            <div class="s-result"><div class="s-domain">glossier.com</div><div class="s-title">Glossier — Skincare & Beauty</div><div class="s-snip">Simple, effective skincare you'll love.</div><div class="s-pos">#2</div></div>
+            <div class="s-result"><div class="s-domain">tatcha.com</div><div class="s-title">Tatcha Skincare | Japanese Beauty</div><div class="s-snip">Luxury Japanese skincare — shop now.</div><div class="s-pos">#3</div></div>
+            <div class="s-warn">⚠ Your brand doesn't appear. Customers are buying from competitors right now.</div>
           </div>
 
           <div id="s-after">
-            <div class="s-result s-you"><div class="s-domain">brightsmilefamilydentistry.com</div><div class="s-title">Bright Smile Family Dentistry<span class="you-tag">You</span></div><div class="s-snip">Award-winning family dentist in South Austin. Accepting new patients. Same-week appointments.</div><div class="s-pos">#1</div></div>
-            <div class="s-result"><div class="s-domain">austindentalpros.com</div><div class="s-title">Austin Dental Pros — Family & Cosmetic Dentistry</div><div class="s-snip">Experienced Austin dentists. Book online.</div><div class="s-pos">#2</div></div>
-            <div class="s-result"><div class="s-domain">smilesofaustin.com</div><div class="s-title">Smiles of Austin | Dentist Near Me</div><div class="s-snip">Compassionate dental care for the whole family.</div><div class="s-pos">#3</div></div>
-            <div class="s-good">✓ You're result #1. New patient calls increased 127% within 6 weeks.</div>
+            <div class="s-result s-you"><div class="s-domain">solarisskincare.com</div><div class="s-title">Solaris Skincare — Clean, Effective Beauty<span class="you-tag">You</span></div><div class="s-snip">Award-winning clean skincare. Free US shipping. Shop the full collection today.</div><div class="s-pos">#1</div></div>
+            <div class="s-result"><div class="s-domain">cerave.com</div><div class="s-title">CeraVe — Moisturizing Cream for Dry Skin</div><div class="s-snip">Developed with dermatologists. Shop online.</div><div class="s-pos">#2</div></div>
+            <div class="s-result"><div class="s-domain">glossier.com</div><div class="s-title">Glossier — Skincare & Beauty</div><div class="s-snip">Simple, effective skincare you'll love.</div><div class="s-pos">#3</div></div>
+            <div class="s-good">✓ You're result #1. Conversion rate up 189% in 90 days.</div>
           </div>
         </div>
       </div>
@@ -1027,7 +1041,7 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
         <h2 class="section-h rev">Every site <span class="f">built<br/>from scratch.</span><br/>No templates.</h2>
       </div>
       <div class="work-intro-right rev">
-        <p>Four different businesses, four completely different design identities. Every project starts from a blank canvas — never a template.</p>
+        <p>From dental practices to law firms, plumbers to ecommerce brands — four completely different identities, four completely different results. Every project starts from a blank canvas.</p>
         <a href="#cta" class="btn-line">Start your project →</a>
       </div>
     </div>
@@ -1044,7 +1058,6 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
             <div class="pb-dots"><span></span><span></span><span></span></div>
             <div class="pb-url" style="background:#faf5ed;border:1px solid rgba(74,112,85,.2);color:#9a9478">brightsmilefamilydentistry.com</div>
           </div>
-          <!-- Dental site preview -->
           <div class="proj-preview" style="display:grid;grid-template-columns:1fr 1fr;height:260px;overflow:hidden">
             <div style="background:#faf5ed;padding:20px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden">
               <div style="position:absolute;bottom:-20px;left:-10px;font-family:Georgia,serif;font-size:100px;font-weight:600;font-style:italic;color:rgba(74,112,85,.04);line-height:1">S</div>
@@ -1072,7 +1085,7 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
       <div class="proj-info">
         <div class="proj-cat">Dental Practice · Austin, TX</div>
         <div class="proj-name">Bright Smile Family Dentistry</div>
-        <p class="proj-desc">Cormorant Garamond editorial warmth. Split-panel hero — cream left, forest green right. The anxiety of visiting a dentist replaced by the feeling of a trusted friend.</p>
+        <p class="proj-desc">Editorial warmth meets clinical trust. Split-panel hero — cream left, forest green right. The anxiety of visiting a dentist replaced by the feeling of a trusted friend.</p>
         <div class="proj-pills">
           <div class="proj-pill"><span class="up">↑</span> Page 4 → #1</div>
           <div class="proj-pill">+127% monthly calls</div>
@@ -1111,7 +1124,7 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
       <div class="proj-info">
         <div class="proj-cat">Personal Injury Law · Miami, FL</div>
         <div class="proj-name">Laurent Law Group</div>
-        <p class="proj-desc">EB Garamond at maximum scale. Pure black × gold. Case results front and centre. The architecture of authority — a site that commands the weight of $50M+ in recoveries.</p>
+        <p class="proj-desc">Pure black × gold. Case results front and centre. The architecture of authority — a site that commands the weight of $50M+ in recoveries.</p>
         <div class="proj-pills">
           <div class="proj-pill"><span class="up">↑</span> Page 3 → #1</div>
           <div class="proj-pill">+210% enquiries</div>
@@ -1157,7 +1170,7 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
       <div class="proj-info">
         <div class="proj-cat">Plumbing & Heating · Manchester, UK</div>
         <div class="proj-name">Klein & Co Plumbing</div>
-        <p class="proj-desc">Barlow Condensed 900 at 34px in the preview. Bold navy orange with zero apology. Emergency bar, contact form inside the hero, orange diagonal. A trade site with attitude.</p>
+        <p class="proj-desc">Bold navy orange with zero apology. Emergency bar, contact form inside the hero. A trade site with attitude — and results to match.</p>
         <div class="proj-pills">
           <div class="proj-pill"><span class="up">↑</span> Page 5 → #1</div>
           <div class="proj-pill">+89% organic traffic</div>
@@ -1204,7 +1217,7 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
       <div class="proj-info">
         <div class="proj-cat">Chiropractic · Chicago, IL</div>
         <div class="proj-name">Green Street Chiropractic</div>
-        <p class="proj-desc">Lora italic at every heading. Sage, cream and terracotta. Organic dot-grid, split hero with forest right panel. The warmth of a Kinfolk editorial meets evidence-based medicine.</p>
+        <p class="proj-desc">Sage, cream and terracotta. Organic dot-grid, split hero. The warmth of a Kinfolk editorial meets evidence-based medicine — now fully booked.</p>
         <div class="proj-pills">
           <div class="proj-pill"><span class="up">↑</span> Page 6 → #1</div>
           <div class="proj-pill">+145% new patients</div>
@@ -1224,37 +1237,55 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
     <div class="svc-head">
       <div>
         <div class="eyebrow" style="color:rgba(99,98,230,.75)">What we do</div>
-        <h2 class="section-h rev">Three services.<br/><span class="f">One outcome.</span></h2>
+        <h2 class="section-h rev">Everything.<br/><span class="f">One agency.</span></h2>
       </div>
-      <p class="rev">Most clients start with the bundle — new site plus SEO. That's how you get found and convert the visit into a call. We'll tell you honestly which combination makes sense for yours.</p>
+      <p class="rev">From your first website to a full ecommerce rebrand — we handle every aspect of your digital presence. Web design, SEO, ecommerce, Google Ads, branding. One team, every niche, zero compromises.</p>
     </div>
     <div class="svc-rows">
-      <div class="svc rev">
+      <div class="svc-row rev">
         <div class="svc-n">01</div>
         <div class="svc-body">
-          <h3>Website Build</h3>
-          <p>Designed from scratch for your business — your niche, your customers, your personality. Fast, mobile-first, conversion-focused. Delivered in 2 weeks. You own it forever.</p>
-          <div class="svc-tags"><span class="svc-tag">Custom design</span><span class="svc-tag">Mobile-first</span><span class="svc-tag">Sub-2s load</span><span class="svc-tag">5–7 pages</span><span class="svc-tag">2-week delivery</span><span class="svc-tag">You own it</span></div>
+          <h3>Website Design & Build</h3>
+          <p>Custom-built from scratch — for local businesses, ecommerce brands, online services, restaurants, agencies, and everything in between. Mobile-first, conversion-focused, fast. Delivered in 2 weeks. You own it forever.</p>
+          <div class="svc-tags"><span class="svc-tag">Custom design</span><span class="svc-tag">Mobile-first</span><span class="svc-tag">Sub-2s load</span><span class="svc-tag">Any niche</span><span class="svc-tag">2-week delivery</span><span class="svc-tag">You own it</span></div>
         </div>
         <div class="svc-price">From $997<small>one-time</small></div>
       </div>
-      <div class="svc rev">
+      <div class="svc-row rev">
         <div class="svc-n">02</div>
         <div class="svc-body">
-          <h3>Local SEO Retainer</h3>
-          <p>We handle everything — Google Business, local keywords, monthly content, backlinks, citations — so you rank on page 1 and stay there. Work compounds every month. Cancel anytime.</p>
-          <div class="svc-tags"><span class="svc-tag">Google Business</span><span class="svc-tag">Local keywords</span><span class="svc-tag">Monthly content</span><span class="svc-tag">Backlinks</span><span class="svc-tag">Monthly report</span><span class="svc-tag">No contract</span></div>
+          <h3>Ecommerce Store Build</h3>
+          <p>Shopify, WooCommerce, or custom. Product pages engineered to convert, checkout flows that don't leak, brand identity that sells. For DTC brands, online shops, product launches — everything.</p>
+          <div class="svc-tags"><span class="svc-tag">Shopify / WooCommerce</span><span class="svc-tag">Product pages</span><span class="svc-tag">Brand identity</span><span class="svc-tag">Conversion-optimised</span><span class="svc-tag">Upsell flows</span></div>
+        </div>
+        <div class="svc-price">From $1,497<small>one-time</small></div>
+      </div>
+      <div class="svc-row rev">
+        <div class="svc-n">03</div>
+        <div class="svc-body">
+          <h3>SEO — Local & National</h3>
+          <p>Google rankings for local service businesses and national brands alike. Google Business optimisation, keywords, content, backlinks, citations. Work compounds every month. Cancel anytime.</p>
+          <div class="svc-tags"><span class="svc-tag">Local SEO</span><span class="svc-tag">National SEO</span><span class="svc-tag">Google Business</span><span class="svc-tag">Monthly content</span><span class="svc-tag">Backlinks</span><span class="svc-tag">No contract</span></div>
         </div>
         <div class="svc-price">$600<small>/ month</small></div>
       </div>
-      <div class="svc rev">
-        <div class="svc-n">03</div>
+      <div class="svc-row rev">
+        <div class="svc-n">04</div>
         <div class="svc-body">
-          <h3>Google Ads Management</h3>
-          <p>Need calls this week, not in 60 days? We build and manage every campaign — targeting, copy, bidding, call tracking, weekly reports. You set the budget; we make every dollar convert.</p>
-          <div class="svc-tags"><span class="svc-tag">Campaign setup</span><span class="svc-tag">Ad copywriting</span><span class="svc-tag">Daily optimisation</span><span class="svc-tag">Call tracking</span><span class="svc-tag">Weekly reports</span></div>
+          <h3>Google & Meta Ads</h3>
+          <p>Need sales and leads now, not in 60 days? We build and manage every campaign — targeting, copy, creative, bidding, tracking. Google Ads, Meta Ads, Shopping Ads. Every dollar accountable.</p>
+          <div class="svc-tags"><span class="svc-tag">Google Ads</span><span class="svc-tag">Meta Ads</span><span class="svc-tag">Shopping Ads</span><span class="svc-tag">Ad creative</span><span class="svc-tag">Weekly reports</span></div>
         </div>
         <div class="svc-price">$500<small>/ month</small></div>
+      </div>
+      <div class="svc-row rev">
+        <div class="svc-n">05</div>
+        <div class="svc-body">
+          <h3>Brand Identity & Strategy</h3>
+          <p>Logo, colours, typography, brand guidelines — the complete package. For new brands launching, or established businesses that have outgrown their identity. Built to last, not trend.</p>
+          <div class="svc-tags"><span class="svc-tag">Logo design</span><span class="svc-tag">Colour system</span><span class="svc-tag">Typography</span><span class="svc-tag">Brand guidelines</span><span class="svc-tag">Strategy</span></div>
+        </div>
+        <div class="svc-price">From $497<small>one-time</small></div>
       </div>
     </div>
   </div>
@@ -1266,31 +1297,31 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
   <div class="w">
     <div class="process-head">
       <div class="eyebrow rev">How it works</div>
-      <h2 class="section-h rev">From audit to<br/><span class="f">page 1</span> in 4 steps.</h2>
+      <h2 class="section-h rev">From proposal to<br/><span class="f">live</span> in 4 steps.</h2>
     </div>
     <div class="steps rev">
       <div class="step">
         <span class="step-n">Step 01</span>
-        <h3>Free audit</h3>
-        <p>We check your Google ranking, site speed, and competitors. Full written report in your inbox within 24 hours. No calls, no cost, no catch.</p>
+        <h3>Free proposal</h3>
+        <p>Tell us about your business. We'll review your current presence, analyse your competitors, and send a clear written proposal — no calls, no cost, no catch.</p>
         <div class="step-bg">1</div>
       </div>
       <div class="step">
         <span class="step-n">Step 02</span>
-        <h3>Written proposal</h3>
+        <h3>You approve</h3>
         <p>A clear email: what we'll build, what results to expect, the price. Ask questions by email. Decide when you're ready — no pressure, ever.</p>
         <div class="step-bg">2</div>
       </div>
       <div class="step">
         <span class="step-n">Step 03</span>
         <h3>Build & launch</h3>
-        <p>New site live in 2 weeks. SEO starts the same day. We handle all the technical work — you approve by email, we execute.</p>
+        <p>New site live in 2 weeks. SEO or ads start the same day. We handle everything — you approve by email, we execute.</p>
         <div class="step-bg">3</div>
       </div>
       <div class="step">
         <span class="step-n">Step 04</span>
-        <h3>Rankings climb</h3>
-        <p>Within 30–60 days your position moves and calls increase. A monthly report tracks every keyword, every change, every result.</p>
+        <h3>Results arrive</h3>
+        <p>Traffic climbs, sales increase, phones ring. Monthly reports track every keyword, every campaign, every result — no guessing, ever.</p>
         <div class="step-bg">4</div>
       </div>
     </div>
@@ -1313,12 +1344,12 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
       </div>
       <div class="tc rev">
         <div class="tc-stars">★★★★★</div>
-        <p class="tc-text">I'd tried two other agencies before — both gave me jargon-filled reports and zero measurable results. The Pegasus shows exactly what they're doing and the ranking climbs every month without fail.</p>
-        <div class="tc-meta"><div class="tc-av">RK</div><div><strong>R. Klein</strong><span>Plumbing & Heating · Manchester UK</span></div></div>
+        <p class="tc-text">Our Shopify store was converting at 0.8%. After the redesign it jumped to 3.4% in the first month. Every product page was rethought, every flow tightened. Revenue up 340% in 90 days.</p>
+        <div class="tc-meta"><div class="tc-av">SL</div><div><strong>Sarah L.</strong><span>Candle & Lifestyle Brand · Portland</span></div></div>
       </div>
       <div class="tc rev">
         <div class="tc-stars">★★★★★</div>
-        <p class="tc-text">I was skeptical — had no budget to waste. Now I'm fully booked 3 weeks out and had to hire a second chiropractor to handle the demand. The site paid for itself ten times over.</p>
+        <p class="tc-text">I was skeptical — had no budget to waste. Now I'm fully booked 3 weeks out and had to hire a second chiropractor. The site paid for itself ten times over.</p>
         <div class="tc-meta"><div class="tc-av">GS</div><div><strong>Dr. G. Sullivan</strong><span>Chiropractic · Chicago IL</span></div></div>
       </div>
     </div>
@@ -1341,12 +1372,16 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
       </div>
       <div class="faq-list rev">
         <div class="fq o" onclick="this.classList.toggle('o')">
+          <div class="fq-q">What types of businesses do you work with?<div class="fq-icon">+</div></div>
+          <div class="fq-a"><div class="fq-a-in">Every kind. Ecommerce brands, DTC brands, local service businesses, restaurants, law firms, medical practices, trades (plumbers, HVAC, electricians), real estate, fitness, beauty, fashion, tech startups, coaches, online businesses, agencies — if you need a website that works, we can build it. No niche is off the table.</div></div>
+        </div>
+        <div class="fq" onclick="this.classList.toggle('o')">
           <div class="fq-q">How long until I see results?<div class="fq-icon">+</div></div>
-          <div class="fq-a"><div class="fq-a-in">Google rankings typically start moving within 30 days of starting SEO. Most clients report a measurable increase in calls between 45–90 days. For Google Ads, calls can start within 48 hours of campaign launch. You'll get a monthly report with exact position data — no guessing.</div></div>
+          <div class="fq-a"><div class="fq-a-in">For SEO: rankings typically start moving within 30 days. Most clients see measurable increases in traffic and enquiries between 45–90 days. For Google Ads and Meta Ads, results can start within 48–72 hours of campaign launch. For ecommerce redesigns, conversion rate improvements are typically visible immediately after launch.</div></div>
         </div>
         <div class="fq" onclick="this.classList.toggle('o')">
           <div class="fq-q">Is there a contract?<div class="fq-icon">+</div></div>
-          <div class="fq-a"><div class="fq-a-in">No contracts. Website projects are 50% upfront, 50% on delivery — you own it outright. SEO and Ads retainers are month-to-month, cancel anytime. We keep clients because of results, not lock-in clauses.</div></div>
+          <div class="fq-a"><div class="fq-a-in">No contracts. Website and ecommerce projects are 50% upfront, 50% on delivery — you own it outright. SEO, Ads, and retainer services are month-to-month, cancel anytime. We keep clients because of results, not lock-in clauses.</div></div>
         </div>
         <div class="fq" onclick="this.classList.toggle('o')">
           <div class="fq-q">How does payment work?<div class="fq-icon">+</div></div>
@@ -1354,23 +1389,19 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
         </div>
         <div class="fq" onclick="this.classList.toggle('o')">
           <div class="fq-q">Do I need to get on a call?<div class="fq-icon">+</div></div>
-          <div class="fq-a"><div class="fq-a-in">Not at all. Everything — audit, proposal, onboarding, revisions, monthly reports — happens by email. Faster and cleaner for everyone. If you'd prefer a call at any point, happy to arrange one. But most clients never need it.</div></div>
+          <div class="fq-a"><div class="fq-a-in">Not at all. Everything — proposal, onboarding, revisions, monthly reports — happens by email. Faster and cleaner for everyone. If you'd prefer a call at any point, we're happy to arrange one. But most clients never need it.</div></div>
         </div>
         <div class="fq" onclick="this.classList.toggle('o')">
-          <div class="fq-q">What if my website is already decent?<div class="fq-icon">+</div></div>
-          <div class="fq-a"><div class="fq-a-in">Then you may only need the SEO retainer. The free audit will tell us clearly. We won't recommend a new site if you don't need one — honest advice earns better clients than an oversell.</div></div>
-        </div>
-        <div class="fq" onclick="this.classList.toggle('o')">
-          <div class="fq-q">What industries do you work with?<div class="fq-icon">+</div></div>
-          <div class="fq-a"><div class="fq-a-in">Any local service business: dentists, chiropractors, lawyers, plumbers, electricians, roofers, HVAC, auto repair, restaurants, salons, vets, optometrists, physio, contractors. If your business depends on local customers finding you, we can help.</div></div>
+          <div class="fq-q">Can you redesign an existing website?<div class="fq-icon">+</div></div>
+          <div class="fq-a"><div class="fq-a-in">Absolutely. Redesigns are some of our most impactful work — especially for ecommerce brands where a conversion rate improvement of even 1% can mean thousands of dollars per month in additional revenue. Send us your current site and we'll tell you honestly what it needs.</div></div>
         </div>
         <div class="fq" onclick="this.classList.toggle('o')">
           <div class="fq-q">Do you work outside the US?<div class="fq-icon">+</div></div>
-          <div class="fq-a"><div class="fq-a-in">Yes — actively serving the UK, Germany, Netherlands, France, and wider Europe. Local SEO works the same everywhere: your business needs to show up when people in your area search. Geography doesn't change the fundamentals.</div></div>
+          <div class="fq-a"><div class="fq-a-in">Yes — we actively serve the US, UK, Germany, Netherlands, France, Australia, Canada, and beyond. Good web design and SEO fundamentals are universal. Geography doesn't change what makes a website convert.</div></div>
         </div>
         <div class="fq" onclick="this.classList.toggle('o')">
-          <div class="fq-q">What's in the free audit?<div class="fq-icon">+</div></div>
-          <div class="fq-a"><div class="fq-a-in">Your Google ranking for your main keywords, mobile/desktop speed score, breakdown of what your top 3 competitors are doing differently, and a written action plan with 3–5 prioritised changes. Delivered within 24 hours. No sales pitch embedded — just data.</div></div>
+          <div class="fq-q">What's in the free proposal?<div class="fq-icon">+</div></div>
+          <div class="fq-a"><div class="fq-a-in">A review of your current website (if you have one), competitor analysis, a breakdown of what we'd build and why, projected results, the price — all in a clear written email. No sales pitch embedded. Just honest analysis and a clear plan.</div></div>
         </div>
       </div>
     </div>
@@ -1383,41 +1414,51 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
   <div class="w">
     <div class="cta-inner">
       <div class="cta-left">
-        <h2>Get found<br/>on Google.<br/><span class="f">Starting today.</span></h2>
-        <p>Request a free audit and you'll have a full written Google ranking report in your inbox within 24 hours. No calls, no pitch, no pressure — just honest data about where you stand.</p>
+        <h2>Get your business<br/>growing online.<br/><span class="f">Starting today.</span></h2>
+        <p>Tell us about your business and what you need. We'll come back with a full written proposal — competitor analysis, what we'd build, and what results to expect. Free, honest, and in your inbox within 24 hours.</p>
         <div class="cta-checks">
-          <div class="cc">Free audit delivered within 24 hours</div>
+          <div class="cc">Free written proposal within 24 hours</div>
+          <div class="cc">Any niche — ecommerce, local, online brands</div>
           <div class="cc">No calls unless you want one</div>
           <div class="cc">No contracts — cancel anytime</div>
           <div class="cc">Invoiced via PayPal — pay securely</div>
-          <div class="cc">Results visible within 30 days</div>
         </div>
       </div>
       <div>
         <div id="form-wrap">
-          <div class="cta-form-title">Request your free audit</div>
-          <p class="cta-form-sub">60 seconds to fill in. Report in your inbox within 24 hours.</p>
+          <div class="cta-form-title">Request your free proposal</div>
+          <p class="cta-form-sub">Tell us about your project. We'll come back with a clear plan.</p>
           <div class="cta-form">
             <div class="cf-row">
               <input type="text" id="f-name" placeholder="Your name" required/>
               <input type="email" id="f-email" placeholder="Email address" required/>
             </div>
-            <input type="text" id="f-url" placeholder="Your website URL"/>
+            <input type="text" id="f-url" placeholder="Your website URL (or 'none')"/>
             <div class="cf-row">
-              <input type="text" id="f-type" placeholder="Business type (e.g. Dentist)"/>
-              <input type="text" id="f-city" placeholder="City / location"/>
+              <input type="text" id="f-type" placeholder="Business type (e.g. Skincare brand)"/>
+              <input type="text" id="f-city" placeholder="City / country"/>
             </div>
+            <select id="f-budget">
+              <option value="" disabled selected>What do you need?</option>
+              <option>New website build</option>
+              <option>Ecommerce store</option>
+              <option>SEO / Google rankings</option>
+              <option>Google / Meta Ads</option>
+              <option>Brand identity</option>
+              <option>Full package (website + SEO)</option>
+              <option>Not sure — need advice</option>
+            </select>
             <button type="button" class="submit-btn" onclick="doSubmit()">
-              Send my free audit request
+              Send my free proposal request
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
             </button>
-            <p class="cta-note">🔒 No spam. No sales calls. Audit arrives within 24 hours.</p>
+            <p class="cta-note">🔒 No spam. No sales calls. Proposal arrives within 24 hours.</p>
           </div>
         </div>
         <div class="form-success" id="form-ok">
           <div style="font-size:1.8rem;margin-bottom:14px;color:#4ade80">✓</div>
-          <h3>Audit request received.</h3>
-          <p>Full report in your inbox within 24 hours.<br/>Watch for getpegasus@gmail.com</p>
+          <h3>Proposal request received.</h3>
+          <p>Full proposal in your inbox within 24 hours.<br/>Watch for getpegasus@gmail.com</p>
         </div>
       </div>
     </div>
@@ -1433,14 +1474,16 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
         <img src="images/logo.svg" alt="The Pegasus"/>
         The Pegasus
       </div>
-      <p>Websites and local SEO for small businesses in the US, UK, and Europe. No contracts. Results in 30 days or less.</p>
+      <p>Web design, ecommerce, SEO and digital growth for every kind of business — US, UK, and worldwide. No contracts. Results guaranteed.</p>
       <a href="mailto:getpegasus@gmail.com" class="f-email">getpegasus@gmail.com</a>
     </div>
     <div class="f-col">
       <strong>Services</strong>
       <a href="#services">Website Build</a>
+      <a href="#services">Ecommerce Store</a>
       <a href="#services">SEO Retainer</a>
-      <a href="#services">Google Ads</a>
+      <a href="#services">Google & Meta Ads</a>
+      <a href="#services">Brand Identity</a>
     </div>
     <div class="f-col">
       <strong>Work</strong>
@@ -1450,15 +1493,17 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
       <a href="https://greenstreet-chiro.vercel.app" target="_blank">Green Street Chiro</a>
     </div>
     <div class="f-col">
-      <strong>Company</strong>
-      <a href="#process">Process</a>
-      <a href="#faq">FAQ</a>
-      <a href="#cta">Free Audit</a>
+      <strong>Niches</strong>
+      <a href="#niches">Ecommerce Brands</a>
+      <a href="#niches">Local Services</a>
+      <a href="#niches">Restaurants & Food</a>
+      <a href="#niches">Health & Wellness</a>
+      <a href="#niches">Startups & Tech</a>
     </div>
   </div>
   <div class="w footer-btm">
     <span>© 2025 The Pegasus. Payments via PayPal Business.</span>
-    <span>US · UK · Europe</span>
+    <span>US · UK · Worldwide · Every Niche</span>
   </div>
 </footer>
 
@@ -1530,9 +1575,10 @@ footer { background: var(--black-3); padding: 80px 0 0; border-top: 1px solid rg
       website:      document.getElementById('f-url').value,
       business_type:document.getElementById('f-type').value,
       city:         document.getElementById('f-city').value,
+      need:         document.getElementById('f-budget').value,
     };
 
-    fetch('https://formspree.io/f/mjgjkkll',{
+    fetch('https://formspree.io/f/YOUR_FORM_ID',{
       method:'POST',
       headers:{'Content-Type':'application/json','Accept':'application/json'},
       body:JSON.stringify(data)
